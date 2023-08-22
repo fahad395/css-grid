@@ -1,0 +1,89 @@
+
+
+
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+}
+
+
+
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+
+     grid-template-areas: "nav nav nav nav"
+                           "sidebar main main main"
+                           "sidebar content1 content2 content3"
+                         "sidebar footer footer footer";
+    grid-gap: 10px;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    
+}      
+
+nav{
+    background:#bbee02;
+    grid-area: nav;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+}
+main{
+    background:#c9f628;
+    grid-area: main;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+}
+#sidebar {
+    background:#ceef57;
+    grid-area: sidebar;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+}
+#content1{
+    background:#e2f2a6;
+    grid-area: content1;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+}
+#content2{
+    background:#e2f2a6;
+    grid-area: content2;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+}
+#content3{
+    background:#e2f2a6;
+    grid-area: content3; 
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+}
+
+footer{
+    background:#e2f2a6;
+    grid-area: footer;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+}
+
+@media only screen and (max-width:550px)
+{
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 2fr 1fr 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+}
